@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Selectors</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $("#btnClick").click(function() {
+                // Selects the first paragraph
+                $("p:first").css("color", "red");
+                // Selects the last paragraph, li, and tr elements
+                $("p:last, li:last, tr:last").css("color", "purple");
+                // Selects the even li elements (0, 2, etc)
+                $("li:even").css("color", "blue");
+                // Selects the odd li elements
+                $("p:odd").css("color", "orange");
+                // Selects the li element at index 3
+                $("li:eq(3)").css("color", "pink");
+                // Selects the all li elements less than index 2
+                $("li:lt(2)").css("color", "yellow");
+                // Selects the all li elements greater than index 2
+                $("li:gt(2)").css("color", "gray");
+            });
+        });
+    </script>
+</head>
+<body>
+    <p id="first para">First Paragraph. First Paragraph.</p>
+    <ol>
+        <li>John Smith</li>
+        <li>Aaron White</li>
+        <li>Sarah Brown</li>
+        <li>Aidan Jones</li>
+        <li>Maria Williams</li>
+    </ol>
+    <p id="second-para">Second Paragraph. Second Paragraph.</p>
+    <table>
+        <tr><th>ID</th><th>Name</th><th>Department</th></tr>
+        <tr><td>1</td><td>John Smith</td><td>Accounts</tr>
+        <tr><td>2</td><td>Aaron White</td><td>Sales</tr>
+        <tr><td>3</td><td>Sarah Brown</td><td>Sales</tr>
+        <tr><td>4</td><td>Aidan Jones</td><td>Accounts</tr>
+        <tr><td>5</td><td>Maria Williams</td><td>Marketing</tr>
+    </table>
+    <p id="third-para">Third Paragraph. Third Paragraph.</p>
+    <button id="btnClick">Click!!!</button>
+</body>
+</html>
+
+
+
