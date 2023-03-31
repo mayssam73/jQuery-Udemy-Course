@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Events</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script type="text/javascript">
+       $(document).ready(function(){
+            // Triggered when window is resized
+            $(window).resize(function() {
+                $('#div').text("Width: " + $(window).width() + "Height: " + $(window).height());
+            })
+            // Triggered when page is scrolled on
+            var i = 1;
+            $(window).scroll(function() {
+                $('#div').text("Scroll: " + i);
+                i++;
+            })
+        });      
+    </script>
+</head>
+<body>
+    <div></div>
+    <p>
+        My Paragraph. My Paragraph.
+        My Paragraph. My Paragraph.
+        My Paragraph. My Paragraph.
+        My Paragraph. My Paragraph.
+        My Paragraph. My Paragraph.
+        My Paragraph. My Paragraph.
+        My Paragraph. My Paragraph.
+        My Paragraph. My Paragraph.
+        My Paragraph. My Paragraph.
+        My Paragraph. My Paragraph.
+        My Paragraph. My Paragraph.
+        My Paragraph. My Paragraph.
+        My Paragraph. My Paragraph.
+        My Paragraph. My Paragraph.
+        My Paragraph. My Paragraph.
+        My Paragraph. My Paragraph.
+        My Paragraph. My Paragraph.
+        My Paragraph. My Paragraph.
+        My Paragraph. My Paragraph.
+        My Paragraph. My Paragraph.
+        My Paragraph. My Paragraph.
+        My Paragraph. My Paragraph.
+    </p>
+</body>
+</html>
+
+
+
