@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Events</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script type="text/javascript">
+       $(document).ready(function(){
+            // Attach element to event handler
+            $("p").on("click", function() {
+                $(this).css("fontSize", "20px");
+            });
+            // Detach element from event handler
+            $("button").click(function() {
+                $("p").off("click");
+            });
+            // To pass multiple event handlers in, must do as key value pairs!
+            $("p").on({click: function() {
+                $(this).css("fontSize", "20px");
+            }, dblClick: function() {
+                $(this).css("color", "red");
+            }});  
+            // Similar to on, except off event gets triggered automatically after one iteration
+            $("#btnClick").one("click", function() {
+                var i = 1;
+                $("div").text(i);
+                i++;
+            });
+            // Trigger lets you choose when to trigger an event specifically
+            // For example, below, the second paragraph does not change color until the first paragraph has been clicked
+            $("p").on("click", function() {
+                $(this).css("background-color", "pink");
+            });
+            $("p:first").click(function() {
+                $("p:last").trigger("click");
+            });
+       });
+    </script>
+</head>
+
+<body>
+<div></div>
+<p>First Paragraph</p>
+<p>Second Paragraph</p>
+<button id="btnClick">Click</button>
+</body>
+</html>
+
+
+
