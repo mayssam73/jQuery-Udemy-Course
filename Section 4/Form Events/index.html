@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Events</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script type="text/javascript">
+       $(document).ready(function(){
+            // When text field is pressed, changes permanently to this
+            $(':text').focus(function() {
+                $(this).css("background-color", "gray");
+            });
+            // When text field is pressed away from, changes permanently to this
+            $(':text').blur(function() {
+                $(this).css("background-color", "white");
+            });
+            // Focus only focuses when parent element is triggered. focusin makes it so that if any of the children or the parent are triggered, it focuses
+            $('fieldset').focusin(function() {
+                $(this).css("background-color", "gray");
+            });
+            // focusout works the opposite of focusin (works likes blur)
+            $('fieldset').focusout(function() {
+                $(this).css("background-color", "white");
+            });
+        });      
+    </script>
+</head>
+
+<body>
+<fieldset style="width:200px;">
+    <legend><b>Personal</b></legend>
+    <input type="text" id="firstName" placeholder="First Name" /><br />
+    <input type="text" id="lastName" placeholder="Last Name" /><br />
+    <input type="submit" id="btnSubmit" value="Submit" />
+</fieldset>
+</body>
+</html>
+
+
+
