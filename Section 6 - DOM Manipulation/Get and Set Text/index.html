@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>DOM Manipulation</title>
+    <!-- Add reference to latest jQuery file -->
+    <script type="text/javascript">
+       $(document).ready(function(){
+            $("#btnClick").click(function(){
+              // HTML returns HTML, text returns just the text
+              console.log($("p").text());
+              $("p").text("My new pargraph!!!");
+            });
+        });      
+    </script>
+</head>
+
+<body>
+<h3>Personal Details</h3>
+<label for="fname"><b>First Name:</b></label><input type="text" id="fname" value="John"/><br />
+<label for="lname"><b>Last Name:</b></label><input type="text" id="lname" /><br />
+<p>My Paragraph!!!</p>
+<div id="result">The Result!!!</div>
+<input type="button" id="btnClick" value="Click" /><br />
+</body>
+</html>
+
+
+
