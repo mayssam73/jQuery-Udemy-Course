@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>DOM Manipulation</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <style>
+        .parent
+        {
+            border:3px solid black;
+            width:150px;
+            height:100px;
+        }
+    </style>
+    <script type="text/javascript">
+       $(document).ready(function(){
+            $("#btnClick").click(function(){
+                // Adds content at the end of the selected element
+                $("p").append("Good Morning!!!");
+                // After adds item as a sibling of the selected element, while append adds the item as a child element
+                $(".parent").after("<div>Fourth Item</div>");
+                $(".parent").prepend("<div>Fourth Item</div>");
+                $(".parent").before("<div>Fourth Item</div>");
+            });
+        });      
+    </script>
+</head>
+
+<body>
+<p>John Smith</p>
+<div class="parent">
+    <div>First Item</div>
+    <div>Second Item</div>
+    <div>Third Item</div>
+</div><br />
+<input type="button" id="btnClick" value="Click" /><br />
+</body>
+</html>
+
+
+
