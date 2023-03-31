@@ -33,6 +33,17 @@
             $("p:first").click(function() {
                 $("p:last").trigger("click");
             });
+            // Event Delegation: make sure you are careful with this! DOES NOT work in this document, just an example
+            // Use this for newly added elements through jQuery!
+            // Can only do this with on function, not with click function
+            // For event delegation, specify parent element, then specify child element within the function definition
+            $("ul").on("click", "li", function() {
+                $(this).css("background-color", "pink");
+            });
+            $("btnAdd").click(function() {
+                var nextNum = ($("li:last").text()*1) + 1;
+                $("ul").append("<li> + nextNum + </li>");
+            })
        });
     </script>
 </head>
