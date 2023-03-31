@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Events</title>
+    <style>
+        #box{
+            width:200px;
+            height:200px;
+            border:2px solid black;
+            background-color:purple;
+        }
+    </style>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script type="text/javascript">
+       $(document).ready(function(){
+            // Combination of mousedown and mouseup
+            $("#box").click(function(){
+                $(this).css("background-color", "pink");
+            });
+            $("#box").dblclick(function(){
+                $(this).css("background-color", "yellow");
+            });
+            $("#box").mouseenter(function(){
+                $(this).css("background-color", "gray");
+            });
+            $("#box").mouseleave(function(){
+                $(this).css("background-color", "purple");
+            });
+            // If only one function is defined, the same thing will happen when the mouse enters and leaves
+            // Basically same thing as mouse enter and mouse leave
+            $("#box").hover(function(){
+                $(this).css("background-color", "gray");
+            }, function() {
+                $(this).css("background-color", "purple");
+            });
+            // This is when you click down on the mouse
+            $("#box").mousedown(function(){
+                $(this).css("background-color", "blue");
+            });
+            // This is when you release the click on the mouse
+            $("#box").mouseup(function(){
+                $(this).css("background-color", "green");
+            });
+            // More events on jQuery website!
+        });      
+    </script>
+</head>
+
+<body>
+<form>
+    <div id="box"></div>
+</body>
+</html>
+
+
+
