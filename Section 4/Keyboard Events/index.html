@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Events</title>
+    <style>
+        #txtName
+        {
+           font-size: 30px; 
+        }
+    </style>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script type="text/javascript">
+       $(document).ready(function(){
+            // When key is pressed down
+            $('#txtName').keydown(function() {
+                $(this).css("color", "red");
+            });
+            // When key press is released
+            $('#txtName').keyup(function() {
+                $(this).css("color", "blue");
+            });
+            // Also a keypress event, but at the time this video was made, it reacted differently in different browsers, so that's why she doesn't go over it
+        });      
+    </script>
+</head>
+
+<body>
+<div></div>
+<input type="text" id="txtName" />
+</body>
+</html>
+
+
+
