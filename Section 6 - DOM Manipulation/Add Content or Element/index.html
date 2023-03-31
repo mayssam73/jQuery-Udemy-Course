@@ -20,6 +20,13 @@
                 $(".parent").after("<div>Fourth Item</div>");
                 $(".parent").prepend("<div>Fourth Item</div>");
                 $(".parent").before("<div>Fourth Item</div>");
+
+                // This does NOT work in this file! It is just an example
+                $("btnClick").click(function() {
+                    $("#second").append("<div class='child'></div>");
+                    // When you specify an existing element to be appended, it just moves from its previous location to the new location
+                    $("#second").append($("#first div:first"));
+                })
             });
         });      
     </script>
