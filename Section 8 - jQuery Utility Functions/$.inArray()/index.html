@@ -1,0 +1,18 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Utility Function: $.inArray()</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script>
+         $(document).ready(function(){
+            // Searches for element in array, and returns index if present in array, -1 if not present
+            var myNames = ["Aaron", "Sarah", "Rose", "Abel", "Diya", "John"];
+            // Third paramater is from which position you want to start the search
+            $("#result").html("The index of Abel is " + $.inArray("Abel", myNames, 3));
+        });
+    </script>
+</head>
+<body>
+   <div id="result"></div>
+</body>
+</html>

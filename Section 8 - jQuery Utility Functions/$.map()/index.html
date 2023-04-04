@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Utility Function: $.map()</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script>
+       $(document).ready(function(){
+            var myArr = [1, 2, 3, 4, 5, 6];
+            // Raises each element in myArr to the power of two then assigns answers to newArr
+            var newArr = $.map(myArr, function(item, index) {
+                return (Math.pow(item, 2));
+            });
+            // join has nothing to do with the map function. All it does is join all the elements in the array based on the included html
+            $("#result").html("Current Array: <br />" + myArr.join("<br />") + "<br /> New Array: " + newArr.join("<br />"));
+       });
+    </script>
+</head>
+<body>
+   <div id="result"></div>
+</body>
+</html>

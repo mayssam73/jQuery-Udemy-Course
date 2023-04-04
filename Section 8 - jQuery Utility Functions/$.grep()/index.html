@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Utility Function: $.grep()</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script>
+       $(document).ready(function(){
+        // Creates new array from existing array by taking the items that satisfy a filter function
+        var weekDays = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+        // item in function refers to doing stuff with the item, and index is for doing stuff with the index. You choose which one to apply based on your needs
+        var newArr = $.grep(weekDays, function(item, index) {
+            return (item.charAt(0) == "T");
+        }, true)
+        // true above refers to inverting the selection - so instead of choosing the items that start with T, items that do NOT start with T are chosen instead
+        $("result").html("Current array: " + weekDays + "<br />New Array: " + newArr);
+       });
+    </script>
+</head>
+<body>
+   <div id="result"></div>
+</body>
+</html>
