@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>DOM Manipulation</title>
+    <style>
+        .coloring
+        {
+            color:red;
+        }
+        .sizing
+        {
+            font-size:30px;
+            background-color:green;
+        }
+    </style>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script type="text/javascript">
+       $(document).ready(function(){
+            // To specify multiple css values, set as key-value pairs!
+            $("h1, h2").css({"color": "green", "background-color": "pink"});
+            
+            // This gets the font size of the h1
+            $("#btnAdd").click(function() {
+                alert($("h1").css("font-size"));
+                $("h1, p:last").addClass("coloring sizing");
+            });
+
+            $("#btnRemove").click(function() {
+                $("p:first").removeClass("sizing");
+                // Toggles between adding class and removing class (does whichever one is not currently applied)
+                $("p:first").toggleClass("sizing");
+            });
+        });      
+    </script>
+</head>
+
+<body>
+<h1>Main Heading</h1> 
+<!-- <h1 style="font-size:50px;">Main Heading</h1> -->
+<p>This is the main content</p>
+<h2>Sub Heading</h2>
+<p>This is a new paragraph</p>
+<button id="btnAdd">Add</button>
+<button id="btnRemove">Remove</button>
+</body>
+</html>
